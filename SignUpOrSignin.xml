@@ -9,7 +9,7 @@
   </BasePolicy>
 
   <RelyingParty>
-    <DefaultUserJourney ReferenceId="SignUpOrSignIn" />
+    <DefaultUserJourney ReferenceId="SignUpOrSignIn-Customized" />
     <UserJourneyBehaviors>
       <SingleSignOn Scope="Policy" KeepAliveInDays="7" EnforceIdTokenHintOnLogout="true" />
       <JourneyInsights TelemetryEngine="ApplicationInsights" InstrumentationKey="{Settings:AppInsightsInstrumentationKey}" DeveloperMode="{Settings:DeveloperMode}" ClientEnabled="true" ServerEnabled="true" TelemetryVersion="1.0.0" />

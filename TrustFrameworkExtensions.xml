@@ -71,7 +71,7 @@
 
   <UserJourneys>
 
-    <UserJourney Id="SignUpOrSignIn">
+    <UserJourney Id="SignUpOrSignIn-Customized">
       <OrchestrationSteps>
 
         <OrchestrationStep Order="1" Type="CombinedSignInAndSignUp" ContentDefinitionReferenceId="api.signuporsignin">
@@ -162,6 +162,7 @@
             <ClaimsExchange Id="SelfAsserted-FavoriteColor" TechnicalProfileReferenceId="SelfAsserted-FavoriteColor" />
           </ClaimsExchanges>
         </OrchestrationStep>
+
         <OrchestrationStep Order="9" Type="SendClaims" CpimIssuerTechnicalProfileReferenceId="JwtIssuer" />
 
       </OrchestrationSteps>
