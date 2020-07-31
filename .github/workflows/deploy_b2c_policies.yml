@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  B2C_SERVICE_PRINCIPAL_CLIENT_ID: "59e4f9d8-8f1d-4c3a-8fb9-694f8663b0f6"
+  B2C_SERVICE_PRINCIPAL_CLIENT_ID: "ee7e5f64-2e51-45a3-b4df-54892346c45f"
   
 jobs:
   build-and-deploy:
