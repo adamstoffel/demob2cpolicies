@@ -504,7 +504,7 @@
     -->
   <ClaimsProviders>
 
-        <ClaimsProvider>
+    <ClaimsProvider>
       <!-- The following Domain element allows this profile to be used if the request comes with domain_hint 
            query string parameter, e.g. domain_hint=facebook.com  -->
       <Domain>facebook.com</Domain>
