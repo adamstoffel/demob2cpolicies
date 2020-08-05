@@ -28,6 +28,7 @@
         <OutputClaim ClaimTypeReferenceId="favoriteColor" />
       </OutputClaims>
       <SubjectNamingInfo ClaimType="sub" />
+      
     </TechnicalProfile>
   </RelyingParty>
 </TrustFrameworkPolicy>
