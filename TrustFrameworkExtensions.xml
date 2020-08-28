@@ -16,8 +16,6 @@
         <UserHelpText>Please provide your favorite color.</UserHelpText>
         <UserInputType>TextBox</UserInputType>
       </ClaimType>
-    </ClaimsSchema>
-    <ClaimsSchema>
       <ClaimType Id="userMessage">
         <DisplayName>user message</DisplayName>
         <DataType>string</DataType>
