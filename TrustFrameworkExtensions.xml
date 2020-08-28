@@ -17,6 +17,12 @@
         <UserInputType>TextBox</UserInputType>
       </ClaimType>
     </ClaimsSchema>
+    <ClaimsSchema>
+      <ClaimType Id="userMessage">
+        <DisplayName>user message</DisplayName>
+        <DataType>string</DataType>
+      </ClaimType>
+    </ClaimsSchema>
   </BuildingBlocks>
 
   <ClaimsProviders>
@@ -62,6 +68,23 @@
           <OutputClaims>
             <OutputClaim ClaimTypeReferenceId="favoriteColor" />
           </OutputClaims>
+        </TechnicalProfile>
+
+        <TechnicalProfile Id="REST-AzureFunction">
+          <DisplayName>Validate user input data</DisplayName>
+          <Protocol Name="Proprietary" Handler="Web.TPEngine.Providers.RestfulProvider, Web.TPEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+          <Metadata>
+            <Item Key="ServiceUrl">https://adamtestb2cfunc.azurewebsites.net/api/NameEcho</Item>
+            <Item Key="AuthenticationType">None</Item>
+            <Item Key="SendClaimsIn">Body</Item>
+          </Metadata>
+          <InputClaims>
+            <InputClaim ClaimTypeReferenceId="displayName" />
+          </InputClaims>
+          <OutputClaims>
+            <OutputClaim ClaimTypeReferenceId="userMessage" PartnerClaimType="extension_usermessage" />
+          </OutputClaims>
+          <UseTechnicalProfileForSessionManagement ReferenceId="SM-Noop" />
         </TechnicalProfile>
 
       </TechnicalProfiles>
@@ -159,7 +182,7 @@
 
         <OrchestrationStep Order="7" Type="ClaimsExchange">
           <ClaimsExchanges>
-            <ClaimsExchange Id="SelfAsserted-FavoriteColor" TechnicalProfileReferenceId="SelfAsserted-FavoriteColor" />
+            <ClaimsExchange Id="REST-AzureFunction" TechnicalProfileReferenceId="REST-AzureFunction" />
           </ClaimsExchanges>
         </OrchestrationStep>
 
