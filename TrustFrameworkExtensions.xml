@@ -63,6 +63,9 @@
           <Metadata>
             <Item Key="ContentDefinitionReferenceId">api.selfasserted</Item>
           </Metadata>
+          <InputClaims>
+            <InputClaim ClaimTypeReferenceId="favoriteColor" DefaultValue="placeholder color" />
+          </InputClaims>
           <OutputClaims>
             <OutputClaim ClaimTypeReferenceId="favoriteColor" />
           </OutputClaims>
