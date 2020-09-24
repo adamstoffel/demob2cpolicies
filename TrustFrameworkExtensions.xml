@@ -180,9 +180,15 @@
 
         <OrchestrationStep Order="7" Type="ClaimsExchange">
           <ClaimsExchanges>
-            <ClaimsExchange Id="REST-AzureFunction" TechnicalProfileReferenceId="REST-AzureFunction" />
+            <ClaimsExchange Id="AskUserForFavoriteColor" TechnicalProfileReferenceId="SelfAsserted-FavoriteColor" />
           </ClaimsExchanges>
         </OrchestrationStep>
+<!-- 
+        <OrchestrationStep Order="8" Type="ClaimsExchange">
+          <ClaimsExchanges>
+            <ClaimsExchange Id="GetClaimFromRestApi" TechnicalProfileReferenceId="REST-AzureFunction" />
+          </ClaimsExchanges>
+        </OrchestrationStep> -->
 
         <OrchestrationStep Order="8" Type="SendClaims" CpimIssuerTechnicalProfileReferenceId="JwtIssuer" />
 
