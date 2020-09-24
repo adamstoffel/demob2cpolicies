@@ -27,7 +27,7 @@ jobs:
         Name: "adamtestadb2c.onmicrosoft.com"
         Production: "false"
         Tenant: "adamtestadb2c.onmicrosoft.com"
-        PolicyPrefix: "B2C_1A_Centene_"
+        PolicyPrefix: "B2C_1A_GitDemo_"
         DeploymentMode: "Development"
         DeveloperMode: "true"
         AppInsightsInstrumentationKey: "666351ec-57b2-410d-b1a9-de2dc94da60d"
