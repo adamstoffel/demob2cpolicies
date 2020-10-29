@@ -181,17 +181,17 @@
           </ClaimsExchanges>
         </OrchestrationStep>
 
-        <!-- <OrchestrationStep Order="7" Type="ClaimsExchange">
+        <OrchestrationStep Order="7" Type="ClaimsExchange">
           <ClaimsExchanges>
             <ClaimsExchange Id="AskUserForFavoriteColor" TechnicalProfileReferenceId="SelfAsserted-FavoriteColor" />
           </ClaimsExchanges>
-        </OrchestrationStep> -->
-<!-- 
+        </OrchestrationStep>
+
         <OrchestrationStep Order="8" Type="ClaimsExchange">
           <ClaimsExchanges>
             <ClaimsExchange Id="GetClaimFromRestApi" TechnicalProfileReferenceId="REST-AzureFunction-NameEcho" />
           </ClaimsExchanges>
-        </OrchestrationStep> -->
+        </OrchestrationStep>
 
         <OrchestrationStep Order="7" Type="SendClaims" CpimIssuerTechnicalProfileReferenceId="JwtIssuer" />
 

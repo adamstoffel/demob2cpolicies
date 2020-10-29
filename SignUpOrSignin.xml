@@ -25,8 +25,8 @@
         <OutputClaim ClaimTypeReferenceId="objectId" PartnerClaimType="sub"/>
         <OutputClaim ClaimTypeReferenceId="identityProvider" />
         <OutputClaim ClaimTypeReferenceId="tenantId" AlwaysUseDefaultValue="true" DefaultValue="{Policy:TenantObjectId}" />
-        <!-- <OutputClaim ClaimTypeReferenceId="favoriteColor" /> -->
-        <!-- <OutputClaim ClaimTypeReferenceId="userMessage" /> -->
+        <OutputClaim ClaimTypeReferenceId="favoriteColor" />
+        <OutputClaim ClaimTypeReferenceId="userMessage" />
       </OutputClaims>
       <SubjectNamingInfo ClaimType="sub" />
       
