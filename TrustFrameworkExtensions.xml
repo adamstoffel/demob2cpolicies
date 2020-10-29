@@ -64,14 +64,14 @@
             <Item Key="ContentDefinitionReferenceId">api.selfasserted</Item>
           </Metadata>
           <InputClaims>
-            <InputClaim ClaimTypeReferenceId="favoriteColor" DefaultValue="placeholder color" />
+            <InputClaim ClaimTypeReferenceId="favoriteColor" DefaultValue="no color selected" />
           </InputClaims>
           <OutputClaims>
             <OutputClaim ClaimTypeReferenceId="favoriteColor" />
           </OutputClaims>
         </TechnicalProfile>
 
-        <TechnicalProfile Id="REST-AzureFunction">
+        <TechnicalProfile Id="REST-AzureFunction-NameEcho">
           <DisplayName>Validate user input data</DisplayName>
           <Protocol Name="Proprietary" Handler="Web.TPEngine.Providers.RestfulProvider, Web.TPEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
           <Metadata>
@@ -181,19 +181,19 @@
           </ClaimsExchanges>
         </OrchestrationStep>
 
-        <OrchestrationStep Order="7" Type="ClaimsExchange">
+        <!-- <OrchestrationStep Order="7" Type="ClaimsExchange">
           <ClaimsExchanges>
             <ClaimsExchange Id="AskUserForFavoriteColor" TechnicalProfileReferenceId="SelfAsserted-FavoriteColor" />
           </ClaimsExchanges>
-        </OrchestrationStep>
+        </OrchestrationStep> -->
 <!-- 
         <OrchestrationStep Order="8" Type="ClaimsExchange">
           <ClaimsExchanges>
-            <ClaimsExchange Id="GetClaimFromRestApi" TechnicalProfileReferenceId="REST-AzureFunction" />
+            <ClaimsExchange Id="GetClaimFromRestApi" TechnicalProfileReferenceId="REST-AzureFunction-NameEcho" />
           </ClaimsExchanges>
         </OrchestrationStep> -->
 
-        <OrchestrationStep Order="8" Type="SendClaims" CpimIssuerTechnicalProfileReferenceId="JwtIssuer" />
+        <OrchestrationStep Order="7" Type="SendClaims" CpimIssuerTechnicalProfileReferenceId="JwtIssuer" />
 
       </OrchestrationSteps>
       <ClientDefinition ReferenceId="DefaultWeb" />
